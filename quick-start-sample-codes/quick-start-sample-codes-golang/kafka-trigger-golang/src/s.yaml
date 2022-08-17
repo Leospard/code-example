@@ -67,3 +67,4 @@ services:
                   ConsumerGroup: "{{consumerGroup}}" # 需要提前创建
                   Topic: "{{topicName}}" # 需要提前创建
                   OffsetReset: "{{offsetReset}}" # latest or earliest
+                  Network: "{{network}}" # 所用网络类型（非必填项），可选值有 PublicNetwork 以及 Default，前者表示使用自建 vpc 网络，后者表示使用默认公网

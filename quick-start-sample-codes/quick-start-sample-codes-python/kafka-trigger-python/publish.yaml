@@ -34,11 +34,28 @@ Parameters:
     region:
       title: 地域
       type: string
-      default: cn-qingdao
+      default: cn-hangzhou
       description: 创建应用所在的地区
       enum:
+        - cn-beijing
+        - cn-hangzhou
+        - cn-shanghai
         - cn-qingdao
+        - cn-zhangjiakou
+        - cn-huhehaote
+        - cn-shenzhen
+        - cn-chengdu
         - cn-hongkong
+        - ap-southeast-1
+        - ap-southeast-2
+        - ap-southeast-3
+        - ap-southeast-5
+        - ap-northeast-1
+        - eu-central-1
+        - eu-west-1
+        - us-west-1
+        - us-east-1
+        - ap-south-1
     serviceName:
       title: 服务名
       type: string
@@ -83,4 +100,15 @@ Parameters:
       title: kafka offsetReset
       type: string
       default: latest
-      description: kafka 消费位， 可选最新位点(latest) / 最早位点(earliest)
+      description: kafka 消费位，可选最新位点(latest) / 最早位点(earliest)
+      enum:
+        - latest
+        - earliest
+    network:
+      title: kafka 网络类型
+      type: string
+      default: PublicNetwork
+      description: 所用网络类型，可选值有 PublicNetwork 以及 Default前者表示使用自建 vpc 网络，后者表示使用默认公网
+      enum:
+        - PublicNetwork
+        - Default
