@@ -62,14 +62,10 @@
       - ap-south-1 (孟买)
   - 服务名 (service name): 您需要给您的函数计算服务进行命名，服务名称，只能包含字母、数字、下划线和中划线。不能以数字、中划线开头。长度在 1-128 之间，默认值为 kafka-trigger-quick-start。
   - 函数名 (function name): 您需要给您的函数计算函数进行命名，函数名称，只能包含字母、数字、下划线和中划线。不能以数字、中划线开头。长度在 1-64 之间。默认值为 kafka-trigger-event-function-python3。
-  - vpcId: 我们推荐您使用VPC访问Kafka，选择创建Kafka实例时使用的VPC。注意需要填写函数计算支持的 az。
-  - vswitchIds:  使用vpc中的vswitch id，用于内网访问 kafka，注意需要在函数计算支持的az。
-  - securityGroupId:  kafka 实例所在 vpc 的安全组id，可在`云服务器 ECS`控制台`网络与安全`菜单项找到。
   - 实例ID (instanceId): 您购买的Kafka实例ID。
   - topicName: Kafka实例中某个topic name，此topic的数据生产会触发部署函数，需要您提前创建。
   - 消费组 (consumerGroup): 数据由此消费组消费，需要您提前创建。
   - 消费位点 (offsetReset): Kafka消费位点，可选择最新位点(latest)或最早位点(earliest)。
-  - 网络类型【非必填项】：可选值有 PublicNetwork 以及 Default，前者表示使用自建 vpc 网络，后者表示使用默认公网。
 
 </codepre>
 

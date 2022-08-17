@@ -62,14 +62,10 @@ Using this item, verify that your operational account has the following product 
       - ap-south-1 (Mumbai)
   - Service name: You need to name your Function Compute service. The service name can only contain letters, numbers, underscores and dashes. Cannot start with a number or a dash. The length is between 1-128, the default value is kafka-trigger-quick-start.
   - Function name: You need to name your function calculation function. The function name can only contain letters, numbers, underscores and dashes. Cannot start with a number or a dash. The length is between 1-64. The default is kafka-trigger-event-function-java11.
-  - vpcId: We recommend that you use a VPC to access Kafka, and select the VPC used to create a Kafka instance. Note that you need to fill in the az supported by Function Compute.
-  - vswitchIds: Use the vswitch id in the vpc to access kafka on the intranet. Note that az needs to be supported by Function Compute.
-  - securityGroupId: The security group id of the vpc where the kafka instance is located, which can be found in the `ECS` console `Network and Security` menu item.
   - Instance ID (instanceId): The Kafka instance ID you purchased.
   - topicName: The topic name of the Kafka instance. The data production of this topic will trigger the deployment function, which needs to be created in advance.
   - Consumer Group: Data is consumed by this consumer group, which needs to be created in advance.
   - Consumption location (offsetReset): Kafka consumption location, you can choose the latest location (latest) or the earliest location (earliest).
-  - Network type [non-required item]: The optional values are PublicNetwork and Default, the former means using the self-built vpc network, the latter means using the default public network.
 
 
 </codepre>
